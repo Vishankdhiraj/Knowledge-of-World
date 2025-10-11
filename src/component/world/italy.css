@@ -1,0 +1,150 @@
+.Italy{
+      width: 100%;
+  height: 380px;
+  position: relative;
+  background: linear-gradient(to left, rgb(199, 198, 198),red);
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Italy img{
+  width: 400px;
+  position: absolute;
+  left: 3px;
+}
+.Italy b{
+  font-size: 50px;
+  position: absolute;
+  font-size: 50px;
+  top: 10px;
+  left: 750px;
+  background: linear-gradient(to right, green, white, red);
+  color: transparent;
+  -webkit-background-clip: text; /* Chrome, Safari */
+  background-clip: text;         /* Firefox */
+}
+.Italy a{
+   text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 255px;
+    left: 1300px;
+    font-size: 20px;
+}
+.Italy p{
+    color: black;
+    position: absolute;
+    font-size: 40px;
+    bottom: 50px;
+    left: 400px;
+}
+ .button4{
+    border-color: solid black;
+    background: green;
+    color: white;
+    border-radius: 20px;
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    top: 290px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+@media (max-width: 1024px) {
+  .Italy {
+    width: 100%;
+    height: 350px;
+    padding: 30px 20px;
+  }
+
+  .Italy img {
+    width: 300px;
+    position: absolute;
+    left: 15px;
+    top: 100px;
+  }
+
+  .Italy b {
+      font-size: 50px;
+    position: absolute;
+    top: 50px;
+    left: 400px;
+  }
+
+  .Italy p {
+     font-size: 18px;
+    position: absolute;
+    left: 300px;
+    top: 120px;
+  }
+
+  .Italy a {
+     position: absolute;
+    left: 400px;
+    top: 210px;
+    font-size: 18px;
+  }
+
+ .button4{
+   width: 160px;
+    height: 40px;
+    font-size: 16px;
+    position: relative;
+    top: 80px;
+    left: 60px;
+    font-size: 15px;
+}
+}
+@media (max-width: 600px) {
+  .Italy {
+    width: 100%;
+    height: 400px;
+    padding: 20px 15px;
+  }
+
+  .Italy img {
+    width: 250px;
+    position: relative;
+    left: 0px;
+    top: 20px;
+  }
+
+  .Italy b {
+    font-size: 30px;
+    position: relative;
+    left: 0px;
+    top: 10px;
+  }
+
+  .Italy p {
+    font-size: 20px;
+    position: relative;
+    left: 0px;
+    bottom: 20px;
+  }
+
+  .Italy a {
+    font-size: 16px;
+    position: relative;
+    left: 0px;
+    top: 20px;
+  }
+
+ .button4{
+    border-color: solid black;
+    background: green;
+    color: white;
+    border-radius: 20px;
+    width: 160px;
+    height: 40px;
+    position: relative;
+    top: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+}

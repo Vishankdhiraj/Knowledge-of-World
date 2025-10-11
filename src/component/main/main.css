@@ -1,0 +1,142 @@
+
+.home {
+  position: relative;
+  top: 0px;  /* ✅ push it below navbar */
+  width: 100%;
+  height: 600px;
+  background-color: blue;
+}
+
+.vk {
+  color: yellow;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  font-size: 60px;
+}
+.dk {
+  color: white;
+  position: relative;
+  left: 200px;
+  font-size: 60px;
+}
+.pk {
+  color: white;
+  position: relative;
+  left: 80px;
+  font-size: 40px;
+}
+.home img {
+  width: 600px;
+  position: relative;
+  bottom: 300px;
+  left: 800px;
+}
+.home button {
+  position: relative;
+  bottom: 350px;
+  right: 400px;
+  width: 190px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+.home button:hover {
+  color: yellow;
+}
+.down {
+  position: relative;
+  top: 10px;
+  left: 20px;
+  font-size: 50px;
+  }
+
+/* 🔹 Responsive Media Queries */
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column; /* stack text + image */
+    text-align: center;
+    position: relative;
+    bottom: 55px;
+    padding: 20px;
+  }
+
+  .home-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .vk {
+    font-size: 58px;
+    position: absolute;
+    right: 50px; 
+    top: 10px;
+  }
+
+  .dk {
+    font-size: 40px;
+      position: absolute;
+    right: 140px;
+    top: 85px;
+  }
+
+  .pk {
+    font-size: 37px;
+     position: relative;
+    top: 140px;
+    left: 10px;
+
+  }
+
+  .home button {
+    width: 160px;
+    height: 50px;
+    font-size: 18px;
+    margin: 0px auto;
+    position: relative;
+    top: 150px;
+    left: 40px;
+    display: block;
+  }
+
+  .home img {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    top: 130px;
+    left: 30px;
+  }
+
+  .down {
+    font-size: 30px;
+    position: relative;
+    left: 0px;
+  }
+}
+
+/* Extra small screens (≤ 600px) */
+@media (max-width: 600px) {
+  .vk {
+    font-size:40px;
+    padding-left: 10px;
+  }
+  .dk {
+    font-size: 28px;
+  }
+  .pk {
+    font-size: 18px;
+  }
+  .home button {
+    width: 140px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .down {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,194 @@
+/* ✅ Base Navbar Styles (common for all screens) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000; /* Always above other divs */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  width: 50px;
+  padding-left: 20px;
+}
+
+/* Nav links (desktop default) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: blue;
+}
+
+/* Hamburger icon */
+.menu-toggle {
+  display: none;  /* hide on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 1100; /* above everything */
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: black;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Hamburger animation */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* 🔹 Small Phones (up to 480px) */
+@media (max-width: 480px) {
+  .logo img {
+    width: 40px;
+    padding-left: 10px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+  
+    top: 55px;
+    right: 0;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1050;
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: slideDown 0.3s ease;
+  }
+
+  .nav-links li a {
+    color: black;
+    font-size: 18px;
+  }
+}
+
+/* 🔹 Medium Phones (481px–600px) */
+@media (min-width: 481px) and (max-width: 600px) {
+  .menu-toggle {
+    display: flex !important;
+  }
+
+  .nav-links {
+    display: none;
+    top: 60px;;
+    
+    flex-direction: column;
+  }
+.nav-links.active {
+    display: table;
+    animation: slideDown 0.3s ease;
+    
+  }
+  .nav-links li a {
+    color: black;
+    font-size: 19px;
+  }
+}
+
+/* 🔹 Tablets (601px–900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    background-color: aliceblue;
+    position: absolute;
+    top: 65px;
+    left: 85%;
+    width: 100px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 6px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: slideDown 0.3s ease;
+  }
+
+  .nav-links li a {
+    color: black;
+    font-size: 20px;
+  }
+}
+
+/* 🔹 Laptops (901px–1280px) */
+@media (min-width: 901px) and (max-width: 1280px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    gap: 25px;
+  }
+
+  .nav-links li a {
+    font-size: 17px;
+  }
+}
+
+/* 🔹 Large Desktops (1281px and up) */
+@media (min-width: 1281px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    gap: 40px;
+  }
+
+  .nav-links li a {
+    font-size: 18px;
+  }
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
