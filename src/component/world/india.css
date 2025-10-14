@@ -11,6 +11,11 @@
   justify-content: center;
   text-align: center;
 }
+.pic1:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
 
 .pic1 img {
   width: 400px;

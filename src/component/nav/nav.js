@@ -1,5 +1,7 @@
-      import "./nav.css";
+import "./nav.css";
 import { useState } from "react";
+import { Link } from "react-router-dom"; // ✅ Correct
+
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +14,10 @@ export default function Nav() {
       </span>
 
       {/* Hamburger Toggle */}
-      <div className={`menu-toggle ${isOpen ? "open" : ""}`} onClick={() => setIsOpen(!isOpen)}>
+      <div
+        className={`menu-toggle ${isOpen ? "open" : ""}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -21,10 +26,10 @@ export default function Nav() {
       {/* Nav Menu */}
       <ul className={isOpen ? "nav-links active" : "nav-links"}>
         <li className="list-nav">
-          <a href="mymy\src\component\main\main.html">Home</a>
+          <Link to="/">Home</Link> {/* ✅ route path, not file path */}
         </li>
         <li className="list-nav">
-          <a href="#">About</a>
+          <Link to="/about">About</Link>
         </li>
       </ul>
     </nav>

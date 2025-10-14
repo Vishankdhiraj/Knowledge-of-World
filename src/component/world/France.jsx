@@ -15,7 +15,7 @@ export default function France() {
     <>
 
     <div className="pic2">
-      <img src="./image/france.jpeg" alt="France" />
+      <img src="/image/france.jpeg" alt="France" />
       <b>FRANCE</b>
       <p>
         France is a country in Western Europe known for its history, culture, and monuments.

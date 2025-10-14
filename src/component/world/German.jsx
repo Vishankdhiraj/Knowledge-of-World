@@ -1,3 +1,4 @@
+import "./german.css"
 export default function German() {
   return (
     <div>
