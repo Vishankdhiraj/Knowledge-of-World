@@ -6,6 +6,16 @@
   height: 600px;
   background-color: blue;
 }
+.btn{
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 .vk {
   color: yellow;

@@ -1,6 +1,7 @@
 import './main.css'
-import { useRef } from 'react'
-
+import { createElement, useRef } from 'react'
+import { useState } from 'react'
+ 
 export default function Home() {
     const exploreRef = useRef(null)
 
@@ -9,6 +10,11 @@ export default function Home() {
             exploreRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
         }
     }
+    const [count , setCount] = useState(0);
+    function increment(){
+        setCount(setCount => setCount + 1);
+    }
+
 
     return (
         <>
@@ -19,7 +25,7 @@ export default function Home() {
                     Travel opens the door to creating <br /> memories all around the world
                 </p>
                 <img src="/image/map2.jpg" alt="map" className='map' />
-                <button className='scrollbtn' onClick={handleScroll}>
+                <button className='scrollbtn' onClick= {handleScroll}>
                     Explore
                 </button>
             </div>

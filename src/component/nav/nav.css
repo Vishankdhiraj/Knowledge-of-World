@@ -1,4 +1,84 @@
 /* ✅ Base Navbar Styles (common for all screens) */
+/* Navbar basic styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+body.dark-mode .navbar {
+  background-color:  #2e2e2e;
+  color: white;
+}
+
+body.dark-mode .nav-links a {
+  color: #ddd;
+}
+
+body.dark-mode .nav-links a:hover {
+  color: #fff;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  background: none;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+button.dark-mode-toggle {
+  background-color: #f0f0f0;
+  color: #121212;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive menu styles */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background:  #2e2e2e;
+  color: #121212;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* Dark mode hamburger color */
+body.dark-mode .menu-toggle span {
+  background: white;
+  color: black;
+}
+.dark-mode {
+  background-color: #121212;
+  color: white;
+  border-radius: 50px;
+
+}
+
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -48,6 +128,9 @@
   background: black;
   margin: 4px 0;
   transition: 0.4s;
+}
+.nav-links.active li a {
+  color: black !important;
 }
 
 /* Hamburger animation */
@@ -158,10 +241,12 @@
   .nav-links {
     display: flex !important;
     gap: 25px;
+    color: black;
   }
 
   .nav-links li a {
     font-size: 17px;
+    color: black;
   }
 }
 
@@ -178,6 +263,7 @@
 
   .nav-links li a {
     font-size: 18px;
+    color: black;
   }
 }
 
